@@ -1,4 +1,6 @@
-export const loginUser = (user) => fetch('http://localhost:8088/login', {
+const apiUrl = 'https://localhost:7252';
+
+export const loginUser = (user) => fetch(`${apiUrl}/login`, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -10,7 +12,7 @@ export const loginUser = (user) => fetch('http://localhost:8088/login', {
   }),
 }).then((res) => res.json());
 
-export const registerUser = (newUser) => fetch('http://localhost:8088/register', {
+export const registerUser = (newUser) => fetch(`${apiUrl}/register`, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

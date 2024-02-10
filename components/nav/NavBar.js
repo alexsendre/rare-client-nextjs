@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
+// import { useRouter } from 'next/router';
+// import PropTypes from 'prop-types';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Logo from './rare.jpeg';
 
-function AppNavBar({ token, setToken }) {
-  const navigate = useRouter();
+function AppNavBar() {
+  // const navigate = useRouter();
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -17,7 +17,7 @@ function AppNavBar({ token, setToken }) {
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        {/* <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             {token ? (
               <Link passHref href="/">
@@ -46,17 +46,23 @@ function AppNavBar({ token, setToken }) {
                 <Link passHref href="/login">
                   <Nav.Link>Login</Nav.Link>
                 </Link>
+                <Link passHref href="/users">
+                  <Nav.Link>Users</Nav.Link>
+                </Link>
               </>
             )}
-          </Nav>
-        </Navbar.Collapse>
+          </Nav> */}
+        {/* </Navbar.Collapse> */}
+        <Link passHref href="/users">
+          <Nav.Link>Users</Nav.Link>
+        </Link>
       </Container>
     </Navbar>
   );
 }
 
-AppNavBar.propTypes = {
-  token: PropTypes.string.isRequired,
-  setToken: PropTypes.func.isRequired,
-};
+// AppNavBar.propTypes = {
+//   token: PropTypes.string.isRequired,
+//   setToken: PropTypes.func.isRequired,
+// };
 export default AppNavBar;

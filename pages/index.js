@@ -1,5 +1,7 @@
+import UserList from '../components/UserList';
+
 function Home() {
-  return 'Loading...';
+  return <UserList />;
 }
 
 export default Home;
